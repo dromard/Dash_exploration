@@ -1,6 +1,6 @@
 name: dash-exploration
 dependencies:
-  - python=3.6
+  - python=3.7
   - pip:
     - dash
     - dash-renderer
@@ -11,3 +11,4 @@ dependencies:
     - dash-auth
     - dash-bootstrap-components
     - pandas-datareader
+    - flask

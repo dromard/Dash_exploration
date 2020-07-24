@@ -18,8 +18,7 @@ from pandas_datareader import tiingo
 import pandas_datareader.data as web
 import dash_bootstrap_components as dbc
 from datetime import datetime, timedelta, date
-from app import app
-
+from main import app
 min_date_allowed=datetime(2017, 1,1)
 max_date_allowed=datetime.now()- timedelta(days=2)
 df =  tiingo.get_tiingo_symbols() 
@@ -93,6 +92,3 @@ def update_graph(n_clicks, val, start_date, end_date):
         return dcc.Graph(id = "graph", figure= fig)
     except:
         return html.Div('The NB of API calls to IEX API have been exceeded, retry tomorrow or enter a new API IEX key') # full control over the error UI
-
-
-
