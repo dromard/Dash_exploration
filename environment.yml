@@ -1,4 +1,4 @@
-name dash-exploration
+name: dash-exploration
 dependencies:
   - python=3.6
   - pip:
