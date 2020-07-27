@@ -12,6 +12,7 @@ import dash_html_components as html
 from dash.dependencies import Input, Output
 from main import app
 from apps import stockapp
+from apps import want_a_gear
 
 
 
@@ -43,7 +44,7 @@ sidebar = html.Div(
             [
                 dbc.NavLink("Presentation", href="/page-1", id="page-1-link"),
                 dbc.NavLink("Stock price app", href="/page-2", id="page-2-link"),
-                dbc.NavLink("Page 3", href="/page-3", id="page-3-link"),
+                dbc.NavLink("Want a gear", href="/page-3", id="page-3-link"),
             ],
             vertical=True,
             pills=True,
@@ -76,8 +77,8 @@ def render_page_content(pathname):
         return html.Div(['Personal Studies of Dash App'])
     elif pathname == "/page-2":
         return stockapp.layout
-    elif pathname == "/page-4":
-        return html.Div(['Personal Studies of Dash App'])
+    elif pathname == "/page-3":
+        return want_a_gear.layout
     # If the user tries to reach a different page, return a 404 message
     return dbc.Jumbotron(
         [
