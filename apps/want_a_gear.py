@@ -23,7 +23,7 @@ fig.update_traces(marker = {
                         'size': 12,
                         'color': 'red'
                         } )
-#fig.update_layout(title = 'wheels and col', title_x=0.5)
+fig.update_layout(title = 'Nb of wheels and colour of your gear', title_x=0.5)
 
 
 def encode_image(image_file):
@@ -36,7 +36,7 @@ layout = html.Div([
     html.H2("Click on a red circle to choose a color and a number of wheels for your gear"),
     html.Hr(),
     html.Div([dcc.Graph(id = 'figure',figure= fig)], style={'width':'50%', "float":'left'}),
-    html.Img(id='image', src='children', height=300, "float":'right')
+html.Img(id='image', src='children',  style={'width':'50%', "float":'left'})
     ])
 
 @app.callback( Output('image', 'src'),
