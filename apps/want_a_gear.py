@@ -46,9 +46,7 @@ def update_output(clickData):
     x = clickData['points'][0]['x']
     y = clickData['points'][0]['y']
     row=df[(df['color']==y) & (df['wheels']==x) ]
-    print(row['image'].values[0])
     image = 'images/'+row['image'].values[0]
-    print(image)
     encoded_image = encode_image(image)
 
     return encoded_image

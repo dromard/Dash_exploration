@@ -1,4 +1,7 @@
-__pycache___
+*.pyc
+*.swp
+apps/__pycache__/*
+__pycache__
 venv
 *.pyc
 .DS_Store
